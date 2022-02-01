@@ -1,0 +1,33 @@
+<p>blog-list works!</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let blog of blogs">
+            <td>{{blog.title}}</td>
+            <td>{{blog.body}}</td>
+            <td>
+                <button (click)=deleteBlog(blog.contentId) class="btn btn-danger" style="margin-left: 10px;"> Delete
+                </button>
+                <!-- <button (click) = updateEmployee(content.contentId) class="btn btn-info"> Update </button>
+                <button (click) = deleteEmployee(content.contentId) class="btn btn-danger" style="margin-left: 10px;"> Delete </button>
+                <button (click) = employeeDetails(content.contentId) class="btn btn-info" style="margin-left: 10px;"> View </button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- <div *ngFor="let blog of blogs">
+    <div>{{blog.title}}</div>
+    <textarea>
+        {{blog.body}}
+    </textarea>
+    <button (click)=deleteBlog(blog.contentId) class="btn btn-danger" style="margin-left: 10px;"> Delete
+    </button>
+</div> -->
